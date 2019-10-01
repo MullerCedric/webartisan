@@ -1,0 +1,12 @@
+{
+  "name": "webartisan",
+  "version": "1.0.0",
+  "description": "Thème personnalisé pour le site Web-Artisan",
+  "devDependencies": {},
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
