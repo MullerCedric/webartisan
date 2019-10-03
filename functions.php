@@ -66,3 +66,8 @@ include( __DIR__ . '/core/Post_types/news.php' );
 include( __DIR__ . '/core/Post_types/snippet.php' );
 include( __DIR__ . '/core/Post_types/topic.php' );
 include( __DIR__ . '/core/Post_types/tutorial.php' );
+
+/*
+ * Remove undesirable post types
+ */
+include( __DIR__ . '/core/Post_types/remove_undesirable_post_types.php' );
