@@ -49,3 +49,20 @@ if ( ! function_exists( 'webartisan_setup' ) ) :
 	}
 endif;
 add_action( 'after_setup_theme', 'webart_setup' );
+
+/*
+ * Custom taxonomies
+ */
+include( __DIR__ . '/core/Taxonomies/language.php' );
+include( __DIR__ . '/core/Taxonomies/profession.php' );
+
+/*
+ * Custom post types
+ */
+include( __DIR__ . '/core/Post_types/doc.php' );
+include( __DIR__ . '/core/Post_types/interview.php' );
+include( __DIR__ . '/core/Post_types/job.php' );
+include( __DIR__ . '/core/Post_types/news.php' );
+include( __DIR__ . '/core/Post_types/snippet.php' );
+include( __DIR__ . '/core/Post_types/topic.php' );
+include( __DIR__ . '/core/Post_types/tutorial.php' );
