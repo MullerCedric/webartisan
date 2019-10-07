@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "Thème personnalisé pour le site Web-Artisan",
   "devDependencies": {
+    "cross-env": "^6.0.3",
     "laravel-mix": "^5.0.0",
     "sass": "^1.22.12",
-    "sass-loader": "^8.0.0"
+    "sass-loader": "^8.0.0",
+    "vue-template-compiler": "^2.6.10"
   },
   "main": "index.js",
   "scripts": {

@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/*
+Theme Name: Web-Artisan
+Author: Müller Cédric
+Author URI: https://www.mullercedric.com/
+Description: Thème personnalisé pour le site Web-Artisan
+Requires at least: WordPress 4.7
+Version: 1.0.0
+Text Domain: webartisan
+*/
+
+// Organisation based on ITCSS: settings, tools, generic, base, objects, components, trumps
+@import "settings/animations";
+@import "settings/colors";
+@import "settings/fonts";
+
+@import "generic/reset";
+
+@import "base/body";
+@import "base/code";
+@import "base/footer";
+@import "base/form";
+@import "base/headings";
+@import "base/images";
+@import "base/links";
+@import "base/lists";
+@import "base/section";
+@import "base/type";
+@import "base/wp-wysiwyg";
+
+@import "objects/o-wrapper";
+@import "objects/sticky-footer";

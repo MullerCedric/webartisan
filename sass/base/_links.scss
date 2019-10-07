@@ -1,0 +1,12 @@
+a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: $saturatedDarkPrimary;
+  font-weight: 700;
+  font-style: normal;
+  &:hover, &:focus {
+    color: $darkPrimary;
+    font-style: italic;
+  }
+}

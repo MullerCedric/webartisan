@@ -1,5 +1,6 @@
 <?php
 
+add_action( 'after_setup_theme', 'webart_setup' );
 if ( ! function_exists( 'webartisan_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -46,9 +47,31 @@ if ( ! function_exists( 'webartisan_setup' ) ) :
 				'caption',
 			)
 		);
+
+        /**
+         * Add support for core custom logo.
+         *
+         * @link https://codex.wordpress.org/Theme_Logo
+         */
+        add_theme_support(
+            'custom-logo',
+            array(
+                'height'      => 48,
+                'width'       => 128,
+                'flex-width'  => true,
+                'flex-height' => true,
+            )
+        );
 	}
 endif;
-add_action( 'after_setup_theme', 'webart_setup' );
+
+/**
+ * Enqueue scripts and styles.
+ */
+add_action( 'wp_enqueue_scripts', 'webart_scripts' );
+function webart_scripts() {
+    wp_enqueue_style( 'webart-style', get_stylesheet_uri() );
+}
 
 /*
  * Custom taxonomies
