@@ -76,8 +76,11 @@ function webart_scripts() {
 /*
  * Custom taxonomies
  */
+include( __DIR__ . '/core/Taxonomies/city.php' );
+include( __DIR__ . '/core/Taxonomies/company_type.php' );
 include( __DIR__ . '/core/Taxonomies/language.php' );
 include( __DIR__ . '/core/Taxonomies/profession.php' );
+include( __DIR__ . '/core/Taxonomies/skill.php' );
 
 /*
  * Custom post types
@@ -94,3 +97,21 @@ include( __DIR__ . '/core/Post_types/tutorial.php' );
  * Remove undesirable post types
  */
 include( __DIR__ . '/core/Post_types/remove_undesirable_post_types.php' );
+
+/*
+ * Create image sizes
+ */
+add_action( 'after_setup_theme', 'webart_register_image_sizes' );
+function webart_register_image_sizes() {
+    add_image_size( 'webart-large', 1200 );
+    add_image_size( 'webart-promoted', 720, 405, true );
+    add_image_size( 'webart-thumbnail', 368, 207, true );
+}
+
+/*
+ * Filter the except length to 30 words.
+ */
+function webart_custom_excerpt_length( $length ) {
+    return 30;
+}
+add_filter( 'excerpt_length', 'webart_custom_excerpt_length', 999 );

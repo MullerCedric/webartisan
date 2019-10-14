@@ -13,7 +13,7 @@ function webart_register_snippet() {
             'public' => true,
             'menu_position' => 5,
             'menu_icon' => 'dashicons-editor-code',
-            'supports' => ['title', 'author'],
+            'supports' => ['title', 'editor', 'author'],
             'taxonomies'  => ['post_tag', 'language'],
             'has_archive' => true,
             'rewrite' => ['slug' => 'snippets'],

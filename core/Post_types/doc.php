@@ -13,7 +13,7 @@ function webart_register_doc() {
             'public' => true,
             'menu_position' => 5,
             'menu_icon' => 'dashicons-book-alt',
-            'supports' => ['title'],
+            'supports' => ['title', 'editor'],
             'taxonomies'  => ['language'],
             'has_archive' => false,
             'rewrite' => ['slug' => 'documentation'],

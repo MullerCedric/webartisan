@@ -13,7 +13,7 @@ function webart_register_topic() {
             'public' => true,
             'menu_position' => 5,
             'menu_icon' => 'dashicons-format-chat',
-            'supports' => ['title', 'comments', 'author'],
+            'supports' => ['title', 'editor', 'comments', 'author'],
             'taxonomies'  => ['category', 'language'],
             'has_archive' => true,
             'rewrite' => ['slug' => 'discussions'],

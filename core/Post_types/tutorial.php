@@ -13,7 +13,7 @@ function webart_register_tutorial() {
             'public' => true,
             'menu_position' => 5,
             'menu_icon' => 'dashicons-awards',
-            'supports' => ['title', 'comments', 'author', 'excerpt'],
+            'supports' => ['title', 'editor', 'comments', 'author', 'excerpt'],
             'taxonomies'  => ['category', 'post_tag', 'language'],
             'has_archive' => true,
             'rewrite' => ['slug' => 'tutos'],
