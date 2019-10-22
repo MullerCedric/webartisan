@@ -20,3 +20,14 @@ function webart_register_news() {
         ]
     );
 }
+
+acf_add_options_sub_page([
+    'page_title' => 'Options de la liste',
+    'menu_title' => 'Options de la liste',
+    'menu_slug' => 'news_options',
+    'capability' => 'manage_options',
+    'parent_slug' => 'edit.php?post_type=news',
+    'position' => false,
+    'icon_url' => false,
+    'post_id' => 'news_options',
+]);

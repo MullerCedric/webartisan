@@ -15,8 +15,19 @@ function webart_register_doc() {
             'menu_icon' => 'dashicons-book-alt',
             'supports' => ['title', 'editor'],
             'taxonomies'  => ['language'],
-            'has_archive' => false,
+            'has_archive' => true,
             'rewrite' => ['slug' => 'documentation'],
         ]
     );
 }
+
+acf_add_options_sub_page([
+    'page_title' => 'Options de la liste',
+    'menu_title' => 'Options de la liste',
+    'menu_slug' => 'doc_options',
+    'capability' => 'manage_options',
+    'parent_slug' => 'edit.php?post_type=doc',
+    'position' => false,
+    'icon_url' => false,
+    'post_id' => 'doc_options',
+]);

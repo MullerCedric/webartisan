@@ -20,3 +20,14 @@ function webart_register_interview() {
         ]
     );
 }
+
+acf_add_options_sub_page([
+    'page_title' => 'Options de la liste',
+    'menu_title' => 'Options de la liste',
+    'menu_slug' => 'interview_options',
+    'capability' => 'manage_options',
+    'parent_slug' => 'edit.php?post_type=interview',
+    'position' => false,
+    'icon_url' => false,
+    'post_id' => 'interview_options',
+]);

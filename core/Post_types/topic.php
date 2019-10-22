@@ -20,3 +20,14 @@ function webart_register_topic() {
         ]
     );
 }
+
+acf_add_options_sub_page([
+    'page_title' => 'Options de la liste',
+    'menu_title' => 'Options de la liste',
+    'menu_slug' => 'topic_options',
+    'capability' => 'manage_options',
+    'parent_slug' => 'edit.php?post_type=topic',
+    'position' => false,
+    'icon_url' => false,
+    'post_id' => 'topic_options',
+]);
