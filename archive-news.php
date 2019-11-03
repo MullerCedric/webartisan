@@ -12,7 +12,7 @@ if ($headerVars && $headerVars['page_illu']) {
       if ($headerVars): ?>
         <div class="c-page-desc">
         <h1 id="content">
-            <?= get_field('title', 'news_options'); ?>
+            <?= get_field('title', 'news_options') ?? 'Dernières news'; ?>
         </h1>
         <div><?= $headerVars['page_desc']; ?></div>
         </div><?php
@@ -50,12 +50,12 @@ if ($headerVars && $headerVars['page_illu']) {
                     </a>
                   </div>
                   <div class="o-media__text">
-                    <h3>
+                    <h2>
                       <a href="<?= get_the_permalink(); ?>" title="Vers l'article <?= get_the_title(); ?>"
                          class="c-link">
                           <?php the_title(); ?>
                       </a>
-                    </h3>
+                    </h2>
                     <p><?php the_author(); ?> - Le
                       <time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php
                           echo get_the_date(); ?>
@@ -71,7 +71,7 @@ if ($headerVars && $headerVars['page_illu']) {
                   </div>
                 </article>
               <?php else: ?>
-                <article>
+                <article class="o-card">
                 <div>
                   <a href="<?= get_the_permalink(); ?>" title="Vers l'article <?= get_the_title(); ?>"
                      class="c-link">
@@ -79,12 +79,12 @@ if ($headerVars && $headerVars['page_illu']) {
                   </a>
                 </div>
                 <div>
-                  <h3>
+                  <h2>
                     <a href="<?= get_the_permalink(); ?>" title="Vers l'article <?= get_the_title(); ?>"
                        class="c-link">
                         <?php the_title(); ?>
                     </a>
-                  </h3>
+                  </h2>
                   <p><?php the_author(); ?> - Le
                     <time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php
                         echo get_the_date(); ?>
