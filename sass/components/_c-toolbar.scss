@@ -1,0 +1,9 @@
+.c-toolbar {
+  border-top: .5em solid $primary;
+  &--inner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

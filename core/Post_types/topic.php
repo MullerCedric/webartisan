@@ -1,10 +1,11 @@
 <?php
 add_action('init', 'webart_register_topic');
-function webart_register_topic() {
-    register_post_type( 'topic', [
+function webart_register_topic()
+{
+    register_post_type('topic', [
             'labels' => [
-                'name' => __( 'Discussions' ),
-                'singular_name' => __( 'Discussion' ),
+                'name' => __('Discussions', 'webartisan'),
+                'singular_name' => __('Discussion', 'webartisan'),
                 'add_new_item' => 'Créer une nouvelle discussion',
                 'edit_item' => 'Mettre à jour la discussion',
                 'all_items' => 'Toutes les discussions'
@@ -14,7 +15,7 @@ function webart_register_topic() {
             'menu_position' => 5,
             'menu_icon' => 'dashicons-format-chat',
             'supports' => ['title', 'editor', 'comments', 'author'],
-            'taxonomies'  => ['category', 'language'],
+            'taxonomies' => ['category', 'language'],
             'has_archive' => true,
             'rewrite' => ['slug' => 'discussions'],
         ]

@@ -1,0 +1,54 @@
+.c-link {
+  &:after {
+    display: none;
+  }
+  &__cta {
+    &--big {
+      font-size: $semiBigSize;
+      margin-top: 3em;
+      &:hover, &:focus {
+        margin-left: .25em;
+      }
+    }
+    &:after {
+      speak: none;
+      font-style: normal;
+      font-weight: 400;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      vertical-align: middle;
+      display: inline-block;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-family: "webart-icons", sans-serif;
+      content: "\e900";
+      position: relative;
+      background-color: transparent;
+      font-size: .75em;
+      margin-left: .2em;
+    }
+    &:hover, &:focus {
+      &:after {
+        margin-left: .5em;
+      }
+    }
+  }
+  &__wrapper {
+    text-align: center;
+  }
+  &__cta-big {
+    padding: .75em 1em;
+    margin-top: 3em;
+    font-size: $semiBigSize;
+    font-weight: 700;
+    border: .15em solid $tertiary;
+    border-radius: .33em;
+    background-color: $white;
+    transition: transform 0.12s cubic-bezier(.53,.01,.38,.99);
+    &:hover, &:focus {
+      border-color: $darkPrimary;
+      transform: scale(1.025);
+    }
+  }
+}

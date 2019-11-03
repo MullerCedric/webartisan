@@ -1,0 +1,38 @@
+.c-footer {
+  padding-bottom: 0;
+  &__heading {
+    display: block;
+    font-size: 2.25rem;
+    color: $white;
+    margin: 0 auto .75em;
+    max-width: 40em;
+    &--centered {
+      text-align: center;
+    }
+  }
+  &__newsletter {
+    padding: 0 0 6.5em 0;
+  }
+  & .c-footer__tagline {
+    margin-bottom: 1.5em;
+  }
+  &__main {
+    padding-bottom: 7.5em;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 1.5em;
+    & .c-footer__heading {
+      font-family: Montserrat, "Open Sans", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      font-size: $semiBigSize;
+    }
+  }
+  &__widget {
+    & + .c-footer__widget {
+      margin-top: 2.5em;
+    }
+  }
+}

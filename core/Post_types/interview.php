@@ -3,8 +3,8 @@ add_action('init', 'webart_register_interview');
 function webart_register_interview() {
     register_post_type( 'interview', [
             'labels' => [
-                'name' => __( 'Interviews' ),
-                'singular_name' => __( 'Interview' ),
+                'name' => __('Interviews', 'webartisan'),
+                'singular_name' => __('Interview', 'webartisan'),
                 'add_new_item' => 'Ajouter une nouvelle interview',
                 'edit_item' => 'Mettre à jour l\'interview',
                 'all_items' => 'Toutes les interviews'

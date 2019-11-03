@@ -1,0 +1,29 @@
+.page-numbers {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0.35em 0.55em .25em;
+  margin: 3em .25em 0;
+  font-weight: 700;
+  border: .15em solid $tertiary;
+  border-radius: .33em;
+  background-color: $white;
+  &:not(.current):not(.dots) {
+    &:hover, &:focus {
+      background-color: $primary;
+      border-color: $primary;
+      color: $black;
+    }
+  }
+  &.current {
+    background-color: $tertiary;
+    color: $white;
+    cursor: default;
+  }
+  &.dots {
+    opacity: .65;
+    cursor: default;
+  }
+  &__container {
+    text-align: center;
+  }
+}

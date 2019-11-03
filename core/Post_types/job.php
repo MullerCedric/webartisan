@@ -3,8 +3,8 @@ add_action('init', 'webart_register_job');
 function webart_register_job() {
     register_post_type( 'job', [
             'labels' => [
-                'name' => __( 'Offres d\'emploi' ),
-                'singular_name' => __( 'Offre d\'emploi' ),
+                'name' => __('Offres d\'emploi', 'webartisan'),
+                'singular_name' => __('Offre d\'emploi', 'webartisan'),
                 'add_new_item' => 'Créer une nouvelle offre d\'emploi',
                 'edit_item' => 'Mettre à jour l\'offre d\'emploi',
                 'all_items' => 'Toutes les offres d\'emploi'

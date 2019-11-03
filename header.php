@@ -1,42 +1,25 @@
 <?php
-/**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and the header section
- */
-?><!doctype html>
-<html <?php language_attributes(); ?>>
-<head>
-  <meta charset="<?php bloginfo('charset'); ?>"/>
-  <meta name="author" content="Cédric Müller">
-  <meta name="description" content="<?= get_bloginfo('description'); ?>">
-  <meta name="keywords"
-        content="web, design, qualité, code, codage, tutos, tutoriel, front-end, back-end, web developer, sites, internet, Liège">
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <link rel="profile" href="https://gmpg.org/xfn/11"/>
-    <?php wp_head(); ?>
-</head>
+get_template_part('template-parts/header', 'common');
 
-<body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-<a class="" href="#content">Passer au contenu</a>
-
-<header>
-  <div>
-      <?php get_template_part('template-parts/header', 'main-nav'); ?>
-  </div>
-  <div><?php
-      $headerVars = get_field('header');
-      if ($headerVars): ?>
-        <div>
-          <h1 id="content"><?php the_title(); ?></h1>
-          <div><?= $headerVars['page_desc']; ?></div>
-        </div>
-        <div>
-            <?= $headerVars['page_illu']; ?>
-        </div>
-      <?php else: ?>
-        <h1 id="content"><?php the_title(); ?></h1>
-      <?php endif; ?>
-  </div>
+$headerVars = get_field('header');
+if ($headerVars && $headerVars['page_illu']) {
+    $illuPath = get_template_directory() . '/inc/' . $headerVars['page_illu'] . '.svg';
+    $hasIllu = file_exists($illuPath);
+}
+?>
+<div class="o-wrapper o-wrapper--larger c-page-intro <?= !$hasIllu ? 'c-page-intro--text-only' : '' ?>"><?php
+    if ($headerVars): ?>
+      <div class="c-page-desc">
+      <h1 id="content"><?php the_title(); ?></h1>
+      <div class="c-tagline"><?= $headerVars['page_desc']; ?></div>
+      </div><?php
+        if ($hasIllu): ?>
+          <div class="c-page-illu">
+            <?php include $illuPath; ?>
+          </div><?php
+        endif;
+    else: ?>
+      <h1 id="content"><?php the_title(); ?></h1><?php
+    endif; ?>
+</div>
 </header>

@@ -1,0 +1,28 @@
+.c-socials {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+
+  &__link, &__nolink {
+    padding: .5em;
+    border-radius: 100%;
+    margin-right: .5em;
+    background-color: $white;
+    color: $darkPrimary;
+  }
+
+  &__link {
+    &:hover, &:focus {
+      background-color: $primary;
+      opacity: 1;
+    }
+  }
+
+  &__nolink {
+    cursor: not-allowed;
+    opacity: .65;
+  }
+}

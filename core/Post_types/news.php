@@ -3,8 +3,8 @@ add_action('init', 'webart_register_news');
 function webart_register_news() {
     register_post_type( 'news', [
             'labels' => [
-                'name' => __( 'Actualités' ),
-                'singular_name' => __( 'Actualité' ),
+                'name' => __('Actualités', 'webartisan'),
+                'singular_name' => __('Actualité', 'webartisan'),
                 'add_new_item' => 'Créer une nouvelle actualité',
                 'edit_item' => 'Mettre à jour l\'actualité',
                 'all_items' => 'Toutes les actualités'

@@ -3,8 +3,8 @@ add_action('init', 'webart_register_snippet');
 function webart_register_snippet() {
     register_post_type( 'snippet', [
             'labels' => [
-                'name' => __( 'Snippets' ),
-                'singular_name' => __( 'Snippet' ),
+                'name' => __('Snippets', 'webartisan'),
+                'singular_name' => __('Snippet', 'webartisan'),
                 'add_new_item' => 'Ajouter un nouveau snippet',
                 'edit_item' => 'Mettre à jour le snippet',
                 'all_items' => 'Tous les snippets'

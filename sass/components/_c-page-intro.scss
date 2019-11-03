@@ -1,0 +1,10 @@
+.c-page-intro {
+  display: flex;
+  align-items: center;
+  &--text-only {
+    justify-content: center;
+    max-width: 40rem;
+    text-align: center;
+    margin-top: 5em;
+  }
+}
