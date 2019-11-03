@@ -1,0 +1,29 @@
+.c-avatar {
+  &__wrapper {
+    position: relative;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0 .25em .5em $shadow;
+    &--42 {
+      min-width: 42px;
+      width: 42px;
+      height: 42px;
+    }
+    &--resolved {
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $primaryOverlay;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjggMjgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGw9IndoaXRlIiBkPSJNMjYuMTA5IDguODQ0YzAgMC4zOTEtMC4xNTYgMC43ODEtMC40MzggMS4wNjJsLTEzLjQzOCAxMy40MzhjLTAuMjgxIDAuMjgxLTAuNjcyIDAuNDM4LTEuMDYyIDAuNDM4cy0wLjc4MS0wLjE1Ni0xLjA2Mi0wLjQzOGwtNy43ODEtNy43ODFjLTAuMjgxLTAuMjgxLTAuNDM4LTAuNjcyLTAuNDM4LTEuMDYyczAuMTU2LTAuNzgxIDAuNDM4LTEuMDYybDIuMTI1LTIuMTI1YzAuMjgxLTAuMjgxIDAuNjcyLTAuNDM4IDEuMDYyLTAuNDM4czAuNzgxIDAuMTU2IDEuMDYyIDAuNDM4bDQuNTk0IDQuNjA5IDEwLjI1LTEwLjI2NmMwLjI4MS0wLjI4MSAwLjY3Mi0wLjQzOCAxLjA2Mi0wLjQzOHMwLjc4MSAwLjE1NiAxLjA2MiAwLjQzOGwyLjEyNSAyLjEyNWMwLjI4MSAwLjI4MSAwLjQzOCAwLjY3MiAwLjQzOCAxLjA2MnoiPjwvcGF0aD4KPC9zdmc+");
+        background-position: center center;
+        background-size: 55% 55%;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.c-tuto-list {
+  background-color: $white;
+  border-radius: 1em;
+  list-style-type: none;
+  flex: 3;
+  &__illu {
+    &-container {
+      flex: 2;
+    }
+    margin-right: 3em;
+  }
+}

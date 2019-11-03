@@ -111,9 +111,10 @@ include(__DIR__ . '/core/Post_types/topic.php');
 include(__DIR__ . '/core/Post_types/tutorial.php');
 
 /**
- * Remove undesirable post types
+ * Remove undesirable post types and editors
  */
 include(__DIR__ . '/core/Post_types/remove_undesirable_post_types.php');
+include (__DIR__ . '/core/remove_editor_for_templates.php');
 
 /**
  * View counts

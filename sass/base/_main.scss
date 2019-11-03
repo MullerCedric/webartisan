@@ -1,0 +1,8 @@
+main {
+  & > :last-child {
+    padding-bottom: 11.125em;
+  }
+  & > :first-child {
+    padding-top: 5em;
+  }
+}
