@@ -114,7 +114,7 @@ include(__DIR__ . '/core/Post_types/tutorial.php');
  * Remove undesirable post types and editors
  */
 include(__DIR__ . '/core/Post_types/remove_undesirable_post_types.php');
-include (__DIR__ . '/core/remove_editor_for_templates.php');
+include(__DIR__ . '/core/remove_editor_for_templates.php');
 
 /**
  * View counts
@@ -147,3 +147,34 @@ function webart_custom_excerpt_length($length)
 
 add_filter('excerpt_length', 'webart_custom_excerpt_length', 999);
 
+/**
+ * Escape some common fields
+ */
+add_filter('comment_text', 'webart_escape_comment');
+function webart_escape_comment($comment)
+{
+    return esc_html($comment);
+}
+
+add_filter('the_title', 'webart_escape_title');
+function webart_escape_title($title)
+{
+    return esc_html($title);
+}
+
+// Deleting the previous filter for the nav
+add_filter('pre_wp_nav_menu', 'webart_remove_title_filter_nav_menu');
+function webart_remove_title_filter_nav_menu($nav_menu)
+{
+    // we are working with menu, so remove the title filter
+    remove_filter('the_title', 'webart_escape_title');
+    return $nav_menu;
+}
+
+add_filter('wp_nav_menu_items', 'webart_add_title_filter_non_menu');
+function webart_add_title_filter_non_menu($items)
+{
+    // we are done working with menu, so add the title filter back
+    add_filter('the_title', 'webart_escape_title');
+    return $items;
+}
