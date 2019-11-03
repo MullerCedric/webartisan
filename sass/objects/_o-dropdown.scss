@@ -1,0 +1,38 @@
+.o-dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__sub--depth1 {
+    position: absolute;
+    padding: 0;
+    list-style: none;
+    border: none;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+
+  &__item {
+    &:hover, &:focus, &:focus-within, .focus-within {
+      & .o-dropdown__sub--depth1 {
+        display: block;
+        padding: 1.5em .5em 2em;
+        width: auto;
+        height: auto;
+        clip: auto;
+      }
+    }
+  }
+}
+.o-dropdown .focus-within {
+  & .o-dropdown__sub--depth1 {
+    display: block;
+    padding: 1.5em .5em 2em;
+    width: auto;
+    height: auto;
+    clip: auto;
+  }
+}

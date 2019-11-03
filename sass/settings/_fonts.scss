@@ -1,2 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Lora:700');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,600,700,700i');
+@font-face {
+  font-family: 'element-icons';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url('https://element.eleme.io/static/element-icons.535877f.woff') format('woff');
+}
+@font-face {
+  font-family: 'webart-icons';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url('./fonts/webart-icons.woff') format('woff');
+}

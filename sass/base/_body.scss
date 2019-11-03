@@ -1,25 +1,36 @@
 html,
 body {
   height: 100%;
-  font-size: 16px;
+  font-size: $mainSize;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  user-select: none;
+  user-select: text;
 }
 
 body {
   background-color: $white;
-  border-top: .5em solid $primary;
   color: $black;
   position: relative;
   min-height: 100vh;
+  z-index: z('main-content');
 }
 
 body, * {
   font-family: Montserrat, "Open Sans", Roboto, Helvetica, Arial, sans-serif;
   font-weight: 400;
-  max-width: 100%;
   overflow-wrap: break-word;
   word-break: break-word;
   box-sizing: border-box;
+  &:focus {
+    outline: none;
+  }
+}
+
+::selection {
+  background-color: $primary;
+  color: $black;
+}
+::placeholder {
+  color: inherit;
+  opacity: .55;
 }

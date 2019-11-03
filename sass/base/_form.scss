@@ -8,9 +8,15 @@ input {
   &:focus {
     background-color: $lightGrey;
   }
-  &[type=submit] {
-    color: $saturatedDarkPrimary;
+  &[type="submit"] {
+    color: $tertiary;
     font-weight: 600;
-    border: 3px solid $saturatedDarkPrimary;
+    border: 3px solid $tertiary;
   }
+}
+input[type="submit"], button {
+  cursor: pointer;
+}
+input[disabled], button[disabled] {
+  cursor: not-allowed;
 }

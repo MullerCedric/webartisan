@@ -2,11 +2,26 @@ a {
   display: inline-block;
   position: relative;
   text-decoration: none;
-  color: $saturatedDarkPrimary;
+  color: $tertiary;
   font-weight: 700;
   font-style: normal;
+  vertical-align: middle;
+
   &:hover, &:focus {
     color: $darkPrimary;
-    font-style: italic;
   }
+}
+
+a:not([class]) {
+  text-decoration: underline;
+
+  /*&:hover, &:focus {
+    &:after {
+      right: 0;
+    }
+  }*/
+}
+
+a[disabled] {
+  cursor: not-allowed;
 }

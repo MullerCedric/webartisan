@@ -1,5 +1,11 @@
 .o-wrapper {
-  max-width: 1200px;
+  max-width: $wrapper;
   margin-left: auto;
   margin-right: auto;
+  &--larger {
+    max-width: $wrapperLarger;
+  }
+  &--smaller {
+    max-width: $wrapperSmaller;
+  }
 }

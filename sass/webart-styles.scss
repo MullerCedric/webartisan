@@ -9,10 +9,15 @@ Version: 1.0.0
 Text Domain: webartisan
 */
 
-// Organisation based on ITCSS: settings, tools, generic, base, objects, components, trumps
+// Organisation based on ITCSS: settings, tools, generic, base, objects, components, utilities
 @import "settings/animations";
 @import "settings/colors";
 @import "settings/fonts";
+@import "settings/layout";
+@import "settings/sizes";
+@import "settings/z-index";
+
+@import "tools/functions";
 
 @import "generic/reset";
 
@@ -28,5 +33,33 @@ Text Domain: webartisan
 @import "base/type";
 @import "base/wp-wysiwyg";
 
+@import "objects/o-dropdown";
+@import "objects/o-grid";
+@import "objects/o-media";
 @import "objects/o-wrapper";
 @import "objects/sticky-footer";
+
+@import "components/c-avatar";
+@import "components/c-dropdown";
+@import "components/c-footer";
+@import "components/c-footer-menu";
+@import "components/c-forum-list";
+@import "components/c-link";
+@import "components/c-logo";
+@import "components/c-main-nav";
+@import "components/c-page-desc";
+@import "components/c-page-illu";
+@import "components/c-page-intro";
+@import "components/c-search";
+@import "components/c-small-menu";
+@import "components/c-socials";
+@import "components/c-tag";
+@import "components/c-tagline";
+@import "components/c-thumbnail";
+@import "components/c-toolbar";
+@import "components/c-tuto-list";
+@import "components/c-user-nav";
+@import "components/icon";
+@import "components/page-numbers";
+
+@import "utilities/sr-only";
