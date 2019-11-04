@@ -1,22 +1,41 @@
-label, input {
+label, input, select, button {
   display: block;
 }
-input {
+
+input, select {
+  width: 100%;
+  font-size: 1em;
+  padding: .6em 1.5em;
   border: 1px solid $grey;
-  padding: .75em 1.5em;
+  border-radius: .2em;
   background-color: $white;
+
+  &:hover {
+    cursor: pointer;
+  }
+
   &:focus {
     background-color: $lightGrey;
   }
-  &[type="submit"] {
-    color: $tertiary;
-    font-weight: 600;
-    border: 3px solid $tertiary;
-  }
 }
+
 input[type="submit"], button {
   cursor: pointer;
+  color: $tertiary;
+  font-size: 1em;
+  font-weight: 600;
+  border: 3px solid $tertiary;
+  border-radius: .25em;
+  background-color: $white;
+  padding: .6em 1.5em;
+
+  &:hover {
+    border-color: $primary;
+    background-color: $primary;
+    color: $black;
+  }
 }
+
 input[disabled], button[disabled] {
   cursor: not-allowed;
 }

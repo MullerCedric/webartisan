@@ -34,6 +34,8 @@ Text Domain: webartisan
 @import "base/type";
 @import "base/wp-wysiwyg";
 
+@import "objects/o-card";
+@import "objects/o-doc-list";
 @import "objects/o-dropdown";
 @import "objects/o-grid";
 @import "objects/o-media";
@@ -42,6 +44,7 @@ Text Domain: webartisan
 
 @import "components/c-avatar";
 @import "components/c-dropdown";
+@import "components/c-filters";
 @import "components/c-footer";
 @import "components/c-footer-menu";
 @import "components/c-forum-list";

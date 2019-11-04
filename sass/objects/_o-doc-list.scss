@@ -1,0 +1,25 @@
+.o-doc-list {
+  display: flex;
+  align-items: flex-start;
+  padding: 1em;
+  + .o-doc-list {
+    margin-top: 2.5em;
+  }
+  &__heading {
+    flex-basis: 3em;
+    margin: 0;
+    text-align: left;
+  }
+  &__dl {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    row-gap: 1em;
+    & :nth-child(odd) {
+      text-align: right;
+    }
+  }
+  &:nth-child(odd) {
+    background-color: $lightGrey;
+  }
+}

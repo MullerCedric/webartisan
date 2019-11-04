@@ -88,6 +88,7 @@ include(__DIR__ . '/core/Nav/nav_add_icons.php');
 /**
  * Custom taxonomies
  */
+include(__DIR__ . '/core/Taxonomies/alphabetical.php');
 include(__DIR__ . '/core/Taxonomies/city.php');
 include(__DIR__ . '/core/Taxonomies/company_type.php');
 include(__DIR__ . '/core/Taxonomies/language.php');

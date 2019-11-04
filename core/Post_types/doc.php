@@ -14,7 +14,7 @@ function webart_register_doc() {
             'menu_position' => 5,
             'menu_icon' => 'dashicons-book-alt',
             'supports' => ['title', 'editor'],
-            'taxonomies'  => ['language'],
+            'taxonomies'  => ['language', 'alphabetical'],
             'has_archive' => true,
             'rewrite' => ['slug' => 'documentation'],
         ]
