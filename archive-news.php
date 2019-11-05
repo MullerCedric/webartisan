@@ -99,11 +99,11 @@ if ($headerVars && $headerVars['page_illu']) {
                   </p>
                 </div>
                 </article><?php
-                  endif;
-              endwhile;
-              $total_pages = $news->max_num_pages;?>
-          </div><?php
-          if ($total_pages > 1){
+              endif;
+          endwhile;
+          $total_pages = $news->max_num_pages; ?>
+        </div><?php
+          if ($total_pages > 1) {
               $current_page = max(1, get_query_var('paged'));
               echo '<div class="o-wrapper page-numbers__container">';
 
@@ -111,8 +111,8 @@ if ($headerVars && $headerVars['page_illu']) {
                   'current' => $current_page,
                   'format' => '?paged=%#%',
                   'total' => $total_pages,
-                  'prev_text'    => '<span class="c-pagination__lt" title="' . __('Vers la page précédente', 'webartisan') . '">&lt;</span>',
-                  'next_text'    => '<span class="c-pagination__gt" title="' . __('Vers la page suivante', 'webartisan') . '">&gt;</span>',
+                  'prev_text' => '<span class="c-pagination__lt" title="' . __('Vers la page précédente', 'webartisan') . '">&lt;</span>',
+                  'next_text' => '<span class="c-pagination__gt" title="' . __('Vers la page suivante', 'webartisan') . '">&gt;</span>',
               ));
 
               echo '</div>';
