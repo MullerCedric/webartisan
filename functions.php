@@ -91,8 +91,10 @@ include(__DIR__ . '/core/Nav/nav_add_icons.php');
 include(__DIR__ . '/core/Taxonomies/alphabetical.php');
 include(__DIR__ . '/core/Taxonomies/city.php');
 include(__DIR__ . '/core/Taxonomies/company_type.php');
-include(__DIR__ . '/core/Taxonomies/language.php');
-include(__DIR__ . '/core/Taxonomies/profession.php');
+include(__DIR__ . '/core/Taxonomies/language-doc.php');
+include(__DIR__ . '/core/Taxonomies/language-snippet.php');
+include(__DIR__ . '/core/Taxonomies/language-tutorial.php');
+include(__DIR__ . '/core/Taxonomies/profession-interview.php');
 include(__DIR__ . '/core/Taxonomies/skill.php');
 
 /**

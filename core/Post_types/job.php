@@ -14,7 +14,7 @@ function webart_register_job() {
             'menu_position' => 5,
             'menu_icon' => 'dashicons-megaphone',
             'supports' => ['title', 'author', 'excerpt'],
-            'taxonomies'  => ['post_tag', 'profession', 'skill', 'company_type', 'city'],
+            'taxonomies'  => ['profession-job', 'skill', 'company_type', 'city'],
             'has_archive' => true,
             'rewrite' => ['slug' => 'emplois'],
         ]

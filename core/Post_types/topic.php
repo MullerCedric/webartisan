@@ -15,7 +15,7 @@ function webart_register_topic()
             'menu_position' => 5,
             'menu_icon' => 'dashicons-format-chat',
             'supports' => ['title', 'editor', 'comments', 'author'],
-            'taxonomies' => ['category', 'language'],
+            'taxonomies' => ['category'],
             'has_archive' => true,
             'rewrite' => ['slug' => 'discussions'],
         ]

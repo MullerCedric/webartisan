@@ -113,7 +113,7 @@ get_header(); ?>
               </div>
               <ol class="o-media__text c-tuto-list">
                   <?php while ($tutos->have_posts()): $tutos->the_post();
-                      $terms = get_the_terms($tutos->ID, 'category'); ?>
+                      $terms = get_the_terms($tutos->ID, 'language-tutorial'); ?>
                     <li class="c-tuto-list__item">
                       <a href="<?= get_the_permalink(); ?>" class="c-link">
                         <span class="icon icon--<?= get_field('tuto_type')['value']; ?>"

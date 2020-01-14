@@ -15,7 +15,7 @@ function webart_register_tutorial()
             'menu_position' => 5,
             'menu_icon' => 'dashicons-awards',
             'supports' => ['title', 'editor', 'comments', 'author', 'excerpt'],
-            'taxonomies' => ['category', 'post_tag', 'language'],
+            'taxonomies' => ['language-tutorial'],
             'has_archive' => true,
             'rewrite' => ['slug' => 'tutos'],
         ]

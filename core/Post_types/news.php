@@ -14,7 +14,7 @@ function webart_register_news() {
             'menu_position' => 5,
             'menu_icon' => 'dashicons-welcome-widgets-menus',
             'supports' => ['title', 'editor', 'comments', 'author', 'thumbnail', 'excerpt'],
-            'taxonomies'  => ['category', 'post_tag'],
+            'taxonomies'  => ['post_tag'],
             'has_archive' => true,
             'rewrite' => ['slug' => 'actus'],
         ]

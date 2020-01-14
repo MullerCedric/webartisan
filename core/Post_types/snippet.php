@@ -14,7 +14,7 @@ function webart_register_snippet() {
             'menu_position' => 5,
             'menu_icon' => 'dashicons-editor-code',
             'supports' => ['title', 'editor', 'author'],
-            'taxonomies'  => ['post_tag', 'language'],
+            'taxonomies'  => ['language-snippet'],
             'has_archive' => true,
             'rewrite' => ['slug' => 'snippets'],
         ]

@@ -1,8 +1,8 @@
 <?php
-add_action('init', 'webart_register_profession', 0);
-function webart_register_profession()
+add_action('init', 'webart_register_profession_job', 0);
+function webart_register_profession_job()
 {
-    register_taxonomy('profession', ['post'], [
+    register_taxonomy('profession-job', ['post'], [
         'hierarchical' => true,
         'labels' => [
             'name' => __('Métiers', 'webartisan'),
@@ -20,6 +20,6 @@ function webart_register_profession()
         'show_ui' => true,
         'show_admin_column' => true,
         'query_var' => true,
-        'rewrite' => array('slug' => 'metiers'),
+        'rewrite' => array('slug' => 'metiers-offres'),
     ]);
 }

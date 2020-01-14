@@ -1,8 +1,8 @@
 <?php
-add_action('init', 'webart_register_language', 0);
-function webart_register_language()
+add_action('init', 'webart_register_language_snippet', 0);
+function webart_register_language_snippet()
 {
-    register_taxonomy('language', ['post'], [
+    register_taxonomy('language-snippet', ['post'], [
         'hierarchical' => false,
         'labels' => [
             'name' => __('Langages', 'webartisan'),
@@ -20,6 +20,6 @@ function webart_register_language()
         'show_ui' => true,
         'show_admin_column' => true,
         'query_var' => true,
-        'rewrite' => array('slug' => 'langage'),
+        'rewrite' => array('slug' => 'langages-snippet'),
     ]);
 }

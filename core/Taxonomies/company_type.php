@@ -20,6 +20,6 @@ function webart_register_company_type()
         'show_ui' => true,
         'show_admin_column' => true,
         'query_var' => true,
-        'rewrite' => array('slug' => 'type-de-société'),
+        'rewrite' => array('slug' => 'types-de-société'),
     ]);
 }

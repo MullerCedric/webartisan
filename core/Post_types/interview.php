@@ -14,7 +14,7 @@ function webart_register_interview() {
             'menu_position' => 5,
             'menu_icon' => 'dashicons-businessman',
             'supports' => ['title', 'editor'],
-            'taxonomies'  => ['profession'],
+            'taxonomies'  => ['profession-interview'],
             'has_archive' => true,
             'rewrite' => ['slug' => 'interviews'],
         ]
