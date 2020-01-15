@@ -1,0 +1,40 @@
+.c-card {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 27em;
+  box-shadow: 0 .25em 1.5em $shadow;
+  border-radius: 1em;
+  overflow: hidden;
+
+  & > :first-child {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  &__pic {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  &__text {
+    background-color: white;
+    padding: .75em 1em;
+    margin: 0;
+  }
+
+  &__title {
+    display: block;
+    font-size: $bigSize;
+  }
+
+  &__job {
+    position: absolute;
+    margin-top: .5em;
+    margin-left: .5em;
+    font-size: $mainSize;
+    font-family: Montserrat, "Open Sans", Roboto, Helvetica, Arial, sans-serif;
+    color: $black;
+    z-index: z('foreground');
+  }
+}
