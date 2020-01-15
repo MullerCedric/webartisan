@@ -21,22 +21,22 @@ function webart_nav_add_icons( $items, $args ) {
                 .'"></span>';
             }
         }
-    }
 
-    if ( $menu_icon_el ) {
-        $el_icon_pos = get_field('el_icon_pos', $item);
-        $el_hide_title = get_field('el_hide_title', $item);
-        $title = $el_hide_title ? '<span class="sr-only">' . $item->title . '</span>' : $item->title;
-        if ( $el_icon_pos === 'before' ) {
-            $item->title = '<span class="icon icon--'
-                . $menu_icon_el
-                .'"></span>'
-                . $title;
-        } else {
-            $item->title = $title
-                . '<span class="c-icon c-icon--'
-                . $menu_icon_el
-                .'"></span>';
+        if ( $menu_icon_el ) {
+            $el_icon_pos = get_field('el_icon_pos', $item);
+            $el_hide_title = get_field('el_hide_title', $item);
+            $title = $el_hide_title ? '<span class="sr-only">' . $item->title . '</span>' : $item->title;
+            if ( $el_icon_pos === 'before' ) {
+                $item->title = '<span class="icon icon--'
+                    . $menu_icon_el
+                    .'"></span>'
+                    . $title;
+            } else {
+                $item->title = $title
+                    . '<span class="c-icon c-icon--'
+                    . $menu_icon_el
+                    .'"></span>';
+            }
         }
     }
     return $items;
