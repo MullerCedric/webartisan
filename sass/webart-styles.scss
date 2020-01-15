@@ -10,60 +10,16 @@ Text Domain: webartisan
 */
 
 // Organisation based on ITCSS: settings, tools, generic, base, objects, components, utilities
-@import "settings/animations";
-@import "settings/colors";
-@import "settings/fonts";
-@import "settings/layout";
-@import "settings/sizes";
-@import "settings/z-index";
+@import "settings/all";
 
-@import "tools/functions";
+@import "tools/all";
 
-@import "generic/reset";
+@import "generic/all";
 
-@import "base/body";
-@import "base/code";
-@import "base/footer";
-@import "base/form";
-@import "base/headings";
-@import "base/images";
-@import "base/links";
-@import "base/lists";
-@import "base/main";
-@import "base/section";
-@import "base/type";
-@import "base/wp-wysiwyg";
+@import "base/all";
 
-@import "objects/o-card";
-@import "objects/o-doc-list";
-@import "objects/o-dropdown";
-@import "objects/o-grid";
-@import "objects/o-media";
-@import "objects/o-wrapper";
-@import "objects/sticky-footer";
+@import "objects/all";
 
-@import "components/c-avatar";
-@import "components/c-dropdown";
-@import "components/c-filters";
-@import "components/c-footer";
-@import "components/c-footer-menu";
-@import "components/c-forum-list";
-@import "components/c-link";
-@import "components/c-logo";
-@import "components/c-main-nav";
-@import "components/c-page-desc";
-@import "components/c-page-illu";
-@import "components/c-page-intro";
-@import "components/c-search";
-@import "components/c-small-menu";
-@import "components/c-socials";
-@import "components/c-tag";
-@import "components/c-tagline";
-@import "components/c-thumbnail";
-@import "components/c-toolbar";
-@import "components/c-tuto-list";
-@import "components/c-user-nav";
-@import "components/icon";
-@import "components/page-numbers";
+@import "components/all";
 
 @import "utilities/sr-only";
