@@ -12,9 +12,9 @@ if ($headerVars && $headerVars['page_illu']) {
       if ($headerVars): ?>
         <div class="c-page-desc">
         <h1 id="content">
-            <?= get_field('title', 'doc_options') ?? 'Dernières news'; ?>
+            <?= get_field('title', 'doc_options') ?? 'Documentations'; ?>
         </h1>
-        <div><?= $headerVars['page_desc']; ?></div>
+        <div class="c-page-desc"><?= $headerVars['page_desc']; ?></div>
         </div><?php
           if ($hasIllu): ?>
             <div class="c-page-illu">
