@@ -14,7 +14,7 @@ if ($headerVars && $headerVars['page_illu']) {
         <h1 id="content">
             <?= get_field('title', 'news_options') ?? 'Dernières news'; ?>
         </h1>
-        <div class="c-page-desc"><?= $headerVars['page_desc']; ?></div>
+        <div class="c-tagline"><?= $headerVars['page_desc']; ?></div>
         </div><?php
           if ($hasIllu): ?>
             <div class="c-page-illu">
