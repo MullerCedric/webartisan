@@ -14,11 +14,11 @@ get_header(); ?>
         <section>
           <div class="o-wrapper">
             <h2>Actualités du web</h2>
-            <div class="o-grid o-grid__3 o-grid__container"><?php
+            <div class="o-grid o-grid__medium o-grid__container"><?php
                 while ($news->have_posts()): $i++;
                     $news->the_post();
                     if ($i === 1): ?>
-                      <article class="o-media o-grid__3--full">
+                      <article class="o-media o-grid--full">
                         <div class="o-media__img">
                           <a href="<?= get_the_permalink(); ?>" title="Vers l'article <?= get_the_title(); ?>"
                              class="c-link">

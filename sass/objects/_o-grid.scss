@@ -3,14 +3,21 @@
     display: grid;
     column-gap: $colGap;
     row-gap: $rowGap;
+
     & > * {
       margin: 0; // grid gap should take care of the spacing
     }
   }
-  &__3 {
-    grid-template-columns: 1fr 1fr 1fr;
-    &--full {
-      grid-column: 1 / 4;
-    }
+
+  &--full {
+    grid-column: 1 / -1;
+  }
+
+  &__medium {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  &__small {
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
   }
 }
