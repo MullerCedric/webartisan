@@ -32,16 +32,16 @@ if ($headerVars && $headerVars['page_illu']) {
   <main>
 
       <?php
-      $news = new WP_Query([
+      $interviews = new WP_Query([
           'post_type' => 'interview',
           'posts_per_page' => intval(get_field('items_per_page', 'news_options')),
           'paged' => $paged,
       ]);
-      if ($news->have_posts()): $i = 0; ?>
+      if ($interviews->have_posts()): $i = 0; ?>
         <div class="o-grid o-grid__small o-grid__container o-wrapper"><?php
-          while ($news->have_posts()): $i++;
-              $news->the_post();
-              $professions = get_the_terms($news->ID, 'profession-interview'); ?>
+          while ($interviews->have_posts()): $i++;
+              $interviews->the_post();
+              $professions = get_the_terms($interviews->ID, 'profession-interview'); ?>
             <article class="o-card c-card">
             <a href="<?= get_the_permalink(); ?>" title="Vers l'interview de <?= get_the_title(); ?>"
                class="c-link">
@@ -58,7 +58,7 @@ if ($headerVars && $headerVars['page_illu']) {
             </h2>
             </article><?php
           endwhile;
-          $total_pages = $news->max_num_pages; ?>
+          $total_pages = $interviews->max_num_pages; ?>
         </div><?php
           if ($total_pages > 1) {
               $current_page = max(1, get_query_var('paged'));
