@@ -1,0 +1,24 @@
+.c-table-list {
+  display: grid;
+  grid-template-columns: 1fr minmax(min-content, max-content) minmax(min-content, max-content);
+  gap: 0;
+
+  & > div {
+    background-color: $white;
+    padding: 1em .5em;
+
+    &:nth-child(3n+1) {
+      padding-left: 1em;
+    }
+
+    &:nth-child(3n+3) {
+      padding-right: 1em;
+    }
+
+    &:nth-child(6n+1),
+    &:nth-child(6n+2),
+    &:nth-child(6n+3) {
+      background-color: $lightGrey;
+    }
+  }
+}
