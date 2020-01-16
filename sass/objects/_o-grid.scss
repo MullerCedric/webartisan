@@ -13,11 +13,29 @@
     grid-column: 1 / -1;
   }
 
+  &__one-col {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  &__large {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+
   &__medium {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 
   &__small {
     grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  }
+
+  &__holy {
+    grid-template-columns: minmax(0, 25%) minmax(0, 75%);
+    align-items: start;
+
+    & > :first-child {
+      position: sticky;
+      top: 3.5rem;
+    }
   }
 }

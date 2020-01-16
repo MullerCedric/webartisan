@@ -1,0 +1,61 @@
+.c-job {
+  padding: 1.25em 2em 1.75em;
+  box-shadow: 0 .25em 1.25em $shadow;
+  border-radius: 1em;
+
+  &__text {
+    & > *:nth-child(n+2) {
+      margin-top: 1em;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & h2 {
+      margin: 0 1em 0 0;
+    }
+  }
+
+  &__label {
+    margin: .2em .2em .25em 0;
+    display: inline-block;
+  }
+
+  &__field-group {
+    &:nth-child(n+2) {
+      margin-top: 1.75em;
+    }
+  }
+
+  &__field-title {
+    font-weight: bold;
+    margin-bottom: .25em;
+  }
+
+  &__number {
+    display: inline-block;
+    width: 3.5em;
+    padding: .6em .25em .6em .75em;
+  }
+
+  &__bar {
+    display: flex;
+
+    & > *:first-child {
+      flex: 1;
+      margin-right: .5em;
+    }
+  }
+
+  &__button {
+    margin-left: auto;
+    margin-right: auto;
+    &--small {
+      padding: .6em .75em;
+      border-width: 2px;
+    }
+  }
+}

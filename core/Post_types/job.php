@@ -13,8 +13,8 @@ function webart_register_job() {
             'public' => true,
             'menu_position' => 5,
             'menu_icon' => 'dashicons-megaphone',
-            'supports' => ['title', 'author', 'excerpt'],
-            'taxonomies'  => ['profession-job', 'skill', 'company_type', 'city'],
+            'supports' => ['title', 'author'],
+            'taxonomies'  => ['skill', 'company_type', 'city'],
             'has_archive' => true,
             'rewrite' => ['slug' => 'emplois'],
         ]
