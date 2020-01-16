@@ -79,7 +79,8 @@ get_header(); ?>
                 endwhile; ?>
             </div>
             <div class="c-link__wrapper">
-              <a href="#" title="Vers la liste complète des actus" class="c-link c-link__cta-big">
+              <a href="<?= get_post_type_archive_link('news'); ?>"
+                 title="Vers la liste complète des actus" class="c-link c-link__cta-big">
                 Découvrir d'autres actus
               </a>
             </div>
@@ -127,7 +128,8 @@ get_header(); ?>
               </ol>
             </div>
             <div class="c-link__wrapper">
-              <a href="#" title="Vers la liste complète des tutos" class="c-link c-link__cta-big">
+              <a href="<?= get_post_type_archive_link('tutorial'); ?>"
+                 title="Vers la liste complète des tutos" class="c-link c-link__cta-big">
                 Voir l'ensemble des tutos
               </a>
             </div>
@@ -185,7 +187,8 @@ get_header(); ?>
               <?php endwhile; ?>
           </ol>
           <div class="c-link__wrapper">
-            <a href="#" title="Vers la liste des sujets de discussion" class="c-link c-link__cta-big">
+            <a href="<?= get_post_type_archive_link('topic'); ?>"
+               title="Vers la liste des sujets de discussion" class="c-link c-link__cta-big">
               Parcourir le forum
             </a>
           </div>
