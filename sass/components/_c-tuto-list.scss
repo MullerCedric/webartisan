@@ -3,10 +3,21 @@
   border-radius: 1em;
   list-style-type: none;
   flex: 3;
+
   &__illu {
     &-container {
       flex: 2;
     }
+
     margin-right: 3em;
+  }
+
+  &--large {
+    & .c-tuto-list__item {
+      padding: .25em 1em;
+      & a {
+        padding: .5em 0;
+      }
+    }
   }
 }
