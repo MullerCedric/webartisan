@@ -185,8 +185,8 @@ get_header(); ?>
               <?php endwhile; ?>
           </ol>
           <div class="c-link__wrapper">
-            <a href="#" title="Vers la liste complète des actus" class="c-link c-link__cta-big">
-              Découvrir d'autres actus
+            <a href="#" title="Vers la liste des sujets de discussion" class="c-link c-link__cta-big">
+              Parcourir le forum
             </a>
           </div>
         </div>
