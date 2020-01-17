@@ -1,7 +1,7 @@
 <?php $langFilter = get_query_var('language') ? rtrim(get_query_var('language'), '#') : '' ?>
 <form action="#" method="get" class="o-wrapper o-wrapper--smaller c-filters"><?php
     $existingTerms = get_terms([
-        'taxonomy' => 'language',
+        'taxonomy' => 'language-doc',
         'hide_empty' => true,
     ]);
 
