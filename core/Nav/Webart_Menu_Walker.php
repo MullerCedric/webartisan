@@ -88,7 +88,8 @@ class Webart_Menu_Walker extends Walker_Nav_Menu
         $attributes = !empty($item->attr_title) ? ' title="' . esc_attr($item->attr_title) . '"' : '';
         $attributes .= !empty($item->target) ? ' target="' . esc_attr($item->target) . '"' : '';
         $attributes .= !empty($item->xfn) ? ' rel="' . esc_attr($item->xfn) . '"' : '';
-        $attributes .= ($item->url && $item->url !== '#') ? ' href="' . esc_attr($item->url) . '"' : '';
+        $linkUrl = str_replace('#index--', get_home_url() . '/', esc_attr($item->url));
+        $attributes .= ($item->url && $item->url !== '#') ? ' href="' . $linkUrl . '"' : '';
         $attributes .= ' class="' . implode(' ', $linkClasses) . '"';
 
         // Link text replacement

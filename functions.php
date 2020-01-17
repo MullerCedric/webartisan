@@ -209,3 +209,21 @@ function webart_get_all_terms($postId, $withTaxonomy = false)
     }
     return $terms;
 }
+
+/**
+ * Wip search navigation
+ */
+if (!function_exists('webart_the_posts_navigation')) :
+    /**
+     * Documentation for function.
+     */
+    function webart_the_posts_navigation()
+    {
+        the_posts_pagination([
+            'mid_size' => 2,
+            'prev_text' => '&lt;&nbsp;<span class="nav-prev-text">Plus récent</span>',
+            'next_text' => '<span class="nav-next-text">Plus ancien</span>&nbsp;&gt;',
+        ]);
+    }
+endif;
+
