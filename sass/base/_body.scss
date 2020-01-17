@@ -21,15 +21,22 @@ body, * {
   overflow-wrap: break-word;
   word-break: break-word;
   box-sizing: border-box;
+
   &:focus {
     outline: none;
   }
+}
+
+hr {
+  margin-top: 1.75em;
+  margin-bottom: 2.25em;
 }
 
 ::selection {
   background-color: $primary;
   color: $black;
 }
+
 ::placeholder {
   color: inherit;
   opacity: .55;

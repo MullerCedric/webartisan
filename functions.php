@@ -120,6 +120,11 @@ include(__DIR__ . '/core/Post_types/remove_undesirable_post_types.php');
 include(__DIR__ . '/core/remove_editor_for_templates.php');
 
 /**
+ * Comments
+ */
+include(__DIR__ . '/core/Comments/comment_template.php');
+
+/**
  * View counts
  */
 include(__DIR__ . '/core/view_counts.php');
@@ -180,4 +185,27 @@ function webart_add_title_filter_non_menu($items)
     // we are done working with menu, so add the title filter back
     add_filter('the_title', 'webart_escape_title');
     return $items;
+}
+
+function webart_get_all_terms($postId, $withTaxonomy = false)
+{
+    $post = get_post($postId);
+    $taxonomies = get_object_taxonomies($post->post_type);
+    $terms = [];
+    foreach ($taxonomies as $taxonomy) {
+        $taxonomyTerms = get_the_terms($post->ID, $taxonomy);
+        if (!empty($taxonomyTerms)) {
+            if ($withTaxonomy) {
+                $terms[$taxonomy] = [];
+                foreach ($taxonomyTerms as $term) {
+                    $terms[$taxonomy][] = $term->name;
+                }
+            } else {
+                foreach ($taxonomyTerms as $term) {
+                    $terms[] = $term->name;
+                }
+            }
+        }
+    }
+    return $terms;
 }

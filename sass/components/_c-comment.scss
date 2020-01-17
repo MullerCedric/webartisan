@@ -1,0 +1,35 @@
+.c-comment {
+  padding: 1.25em 1.75em;
+
+  &__section {
+    margin-top: 4em;
+  }
+
+  &__list {
+    padding: 0;
+    margin-bottom: 2em;
+  }
+
+  &__meta {
+    font-size: $semiSmallSize;
+    color: $grey;
+    margin-bottom: .5em;
+  }
+
+  &__reply-title {
+    margin-top: 2em;
+    margin-bottom: .75em;
+  }
+
+  &__input {
+    width: 100%;
+    min-height: 10em;
+    resize: vertical;
+    margin: .5em 0 1.5em;
+  }
+
+  &__submit {
+    width: auto;
+    margin-left: auto;
+  }
+}
