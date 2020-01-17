@@ -1,0 +1,350 @@
+@import url(https://fonts.googleapis.com/css?family=Lora:700);@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,600,700,700i);a, a:after, a:before, button, input, label, textarea {
+  transition: color 0.28s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.28s cubic-bezier(0.4, 0, 0.2, 1), color 0.28s cubic-bezier(0.4, 0, 0.2, 1), border 0.28s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1), margin 0.25s cubic-bezier(0.4, 0, 0.2, 1), padding 0.25s cubic-bezier(0.4, 0, 0.2, 1), width 0.2s cubic-bezier(0.53, 0.01, 0.38, 0.99), height 0.2s cubic-bezier(0.53, 0.01, 0.38, 0.99), left 0.2s cubic-bezier(0.53, 0.01, 0.38, 0.99), right 0.2s cubic-bezier(0.53, 0.01, 0.38, 0.99), top 0.2s cubic-bezier(0.53, 0.01, 0.38, 0.99), bottom 0.2s cubic-bezier(0.53, 0.01, 0.38, 0.99), transform 0.2s cubic-bezier(0.53, 0.01, 0.38, 0.99);
+}
+
+@font-face {
+  font-family: "element-icons";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("https://element.eleme.io/static/element-icons.535877f.woff") format("woff");
+}
+@font-face {
+  font-family: "webart-icons";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("./fonts/webart-icons.woff") format("woff");
+}
+html,
+body {
+  height: 100%;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #161616;
+  position: relative;
+  min-height: 100vh;
+  z-index: 2;
+}
+
+body, * {
+  font-family: Montserrat, "Open Sans", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+body:focus, *:focus {
+  outline: none;
+}
+
+hr {
+  margin-top: 1.75em;
+  margin-bottom: 2.25em;
+}
+
+::-moz-selection {
+  background-color: #5CFABE;
+  color: #161616;
+}
+
+::selection {
+  background-color: #5CFABE;
+  color: #161616;
+}
+
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.55;
+}
+
+::-moz-placeholder {
+  color: inherit;
+  opacity: 0.55;
+}
+
+:-ms-input-placeholder {
+  color: inherit;
+  opacity: 0.55;
+}
+
+::-ms-input-placeholder {
+  color: inherit;
+  opacity: 0.55;
+}
+
+::placeholder {
+  color: inherit;
+  opacity: 0.55;
+}
+
+code, pre, kbd {
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  color: #FFFFFF;
+  background-color: #232928;
+  white-space: pre;
+  padding: 0.25em 0.33em;
+  border-radius: 0.25em;
+}
+
+pre {
+  margin-bottom: 0.75em;
+}
+
+kbd {
+  background-color: #333333;
+  border-bottom: 0.25em solid #161616;
+  border-right: 0.2em solid #161616;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Lora", Georgia, serif;
+  font-weight: 700;
+  color: #146652;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 40em;
+}
+
+h1 {
+  font-size: 4.25rem;
+  margin-bottom: 0.5em;
+  margin-top: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.25em;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  vertical-align: bottom;
+  position: relative;
+}
+
+a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #007f99;
+  font-weight: 700;
+  font-style: normal;
+  vertical-align: middle;
+}
+a:hover, a:focus {
+  color: #146652;
+}
+
+a:not([class]) {
+  text-decoration: underline;
+  /*&:hover, &:focus {
+    &:after {
+      right: 0;
+    }
+  }*/
+}
+
+a[disabled] {
+  cursor: not-allowed;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+main ol, main ul {
+  line-height: 1.75;
+  padding: 1.5em;
+  border-radius: 1em;
+}
+
+main li {
+  padding: 0.2em 1em;
+  border-radius: 0.25em;
+  background-color: #FFFFFF;
+}
+main li:nth-child(odd) {
+  background-color: #F5F6F7;
+}
+
+main > section {
+  margin: 0 auto;
+  padding: 6.5em 0 11.125em;
+  clear: both;
+}
+main > section:nth-child(4n+2) {
+  background-color: #F5F6F7;
+}
+main > section:nth-child(8n+3) {
+  background-color: #5CFABE;
+  position: relative;
+  padding-top: 0;
+}
+main > section:nth-child(8n+3):before {
+  content: "";
+  display: block;
+  height: 10em;
+  width: 100%;
+  background-color: #5CFABE;
+  transform: skewY(3deg);
+  position: relative;
+  top: -5em;
+}
+main > section:nth-child(8n+3) .o-wrapper {
+  position: relative;
+  padding: 6.5em 2em 8em;
+  background-color: #FFFFFF;
+  border-radius: 0.5em;
+  box-shadow: 0 0.25em 4em rgba(15, 30, 25, 0.15);
+  margin-top: -22em;
+}
+main > section:nth-child(8n+3) .o-wrapper:before {
+  content: "";
+  display: block;
+  height: 1.25em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #5CFABE;
+  border-radius: 0.5em 0.5em 0 0;
+}
+main > section:nth-child(8n+2) {
+  padding-bottom: 23.125em;
+}
+
+strong, b {
+  font-weight: 700;
+}
+
+em, i, cite {
+  font-style: italic;
+}
+
+p, dl, ol, ul, blockquote, pre, table {
+  margin: 0 auto 0.75em;
+  line-height: 1.5;
+}
+p:last-child, dl:last-child, ol:last-child, ul:last-child, blockquote:last-child, pre:last-child, table:last-child {
+  margin-bottom: 0;
+}
+
+p:empty {
+  display: none;
+}
+
+blockquote {
+  border-left: 0.25em solid #5CFABE;
+  font-size: 1.25rem;
+  padding: 0.5em 1.25em;
+  max-width: 80%;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin-left: 1.25em;
+}
+
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+abbr {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+small {
+  font-size: 0.7em;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 1em auto;
+}
+
+.alignright {
+  float: right;
+  margin-left: 2rem;
+}
+
+.alignleft {
+  float: left;
+  margin-right: 2rem;
+}
+
+html, body.mce-content-body {
+  /* Fixes Post Editor */
+  height: inherit !important;
+  min-height: inherit !important;
+  max-height: inherit !important;
+  font-size: 0.825em;
+}
+
+body.mce-content-body p, body.mce-content-body ul, body.mce-content-body ol, body.mce-content-body code, body.mce-content-body pre, body.mce-content-body div, body.mce-content-body span, body.mce-content-body iframe, body.mce-content-body blockquote {
+  font-size: 16px;
+}
+body.mce-content-body section {
+  padding: 2em 0 3em;
+}
+body.mce-content-body section:nth-child(even) {
+  background-color: #F5F6F7;
+}
+body.mce-content-body section:before {
+  display: none;
+}
+body.mce-content-body section:nth-child(8n+3) .o-wrapper {
+  position: relative;
+  padding: 6.5em 2em 8em;
+  background-color: #FFFFFF;
+  border-radius: 0.5em;
+  box-shadow: 0 0.25em 4em rgba(15, 30, 25, 0.15);
+  margin-top: -22em;
+}
+body.mce-content-body section:nth-child(8n+3) .o-wrapper:before {
+  content: "";
+  display: block;
+  height: 1.25em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #5CFABE;
+  border-radius: 0.5em 0.5em 0 0;
+}
+body.mce-content-body section:nth-child(8n+2) {
+  padding-bottom: 23.125em;
+}

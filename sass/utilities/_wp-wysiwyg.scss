@@ -1,0 +1,46 @@
+html, body.mce-content-body {
+  /* Fixes Post Editor */
+  height: inherit !important;
+  min-height: inherit !important;
+  max-height: inherit !important;
+  font-size: $semiSmallSize;
+}
+body.mce-content-body {
+  & p, & ul, & ol, & code, & pre, & div, & span, & iframe, & blockquote {
+    font-size: $mainSize;
+  }
+  & section {
+    padding: 2em 0 3em;
+    &:nth-child(even) {
+      background-color: $lightGrey;
+    }
+    &:before {
+      display: none;
+    }
+    &:nth-child(8n+3) {
+      & .o-wrapper {
+        position: relative;
+        padding: 6.5em 2em 8em;
+        background-color: $white;
+        border-radius: .5em;
+        box-shadow: 0 .25em 4em $shadow;
+        margin-top: -22em;
+        &:before {
+          content: "";
+          display: block;
+          height: 1.25em;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          background-color: $primary;
+          border-radius: .5em .5em 0 0;
+        }
+      }
+    }
+    &:nth-child(8n+2) {
+      padding-bottom: 23.125em;
+    }
+  }
+}
+
